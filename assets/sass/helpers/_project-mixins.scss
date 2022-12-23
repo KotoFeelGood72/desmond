@@ -1,0 +1,87 @@
+
+// Сброс стилей input
+@mixin app {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	font-family: $font_1;
+	font-size: $font_size_base;
+}
+
+// Input end
+
+
+// Flex styles
+
+@mixin flex-center {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-col {
+	flex-direction: column;
+}
+
+@mixin flex-start {
+	justify-content: flex-start;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-space {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-end {
+	justify-content: flex-end;
+	display: flex;
+	align-items: center;
+}
+
+// End flex styles
+
+// Style default btn
+
+@mixin absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+@mixin btn {
+	position: relative;
+	a {
+		@include flex-center;
+		padding: 2.3rem 10.1rem;
+		border-radius: 5rem;
+		border: .1rem solid $grey2;
+		text-transform: uppercase;
+		font-family: $font_1;
+		font-weight: 300;
+	}
+}
+
+@mixin mask {
+	&:before {
+		@include absolute;
+		background-color: $dark;
+		opacity: .8;
+		content: '';
+		z-index: 1;
+	}
+}
+
+@mixin border {
+	border-bottom: .6rem solid $grey2;
+	@include bp($point_4) {
+		border-bottom: .3rem solid $grey2;
+	}
+}

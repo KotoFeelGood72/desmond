@@ -1,0 +1,23 @@
+extends _layout
+
+block vars
+	- array = {body_class:'not_footer', layout_mod:'', sub_keywords:'INTERIOR DESIGN FOR WP START', title_inner:'INTERIOR DESIGN START'}
+block content_block
+	section.start 
+		.section_in
+			.start_main
+				.start_logo 
+					a(href="#")
+						img(src="i/svg/logo-grey.svg", alt="")
+				.start_body 
+					h1.start_title we create your dream
+					.start_img 
+						img(src="i/start.jpg", alt="")
+				.start_bottom 
+					.start_contacts 
+						ul 
+							each item in ['+7 911 073-02-38', '+7 911 073-02-38', '#wprojectdesign']
+								li.animation_el 
+									a(href="#")=item
+					.start_btn.animation_el 
+						a(href="/home.html") портфолио

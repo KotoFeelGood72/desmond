@@ -1,0 +1,49 @@
+.footer {
+	width: 100%;
+	min-height: $footer;
+	flex: 0 0 auto;
+	will-change: transform;
+	position: relative;
+	background-color: $dark;
+	color: $white;
+	@include flex-center;
+	font-size: 1.6rem;
+	color: #C7C1B9;
+	@include bp($point_4) {
+		font-size: 1.2rem;
+	}
+	a {
+		font-size: inherit;
+		color: inherit;
+	}
+}
+
+.footer_main {
+	@include flex-space;
+}
+
+.footer_brand {
+	a {
+		@include flex-start;
+		&:hover {
+			p {
+				color: $white;
+			}
+		}
+		p {
+			transition: all .3s ease;
+			margin-right: 1.5rem;
+			@include bp($point_4) {
+				margin: 0 1rem 0 0;
+			}
+		}
+	}
+}
+
+.footer_brand_icon {
+	width: 3rem;
+	@include flex-center;
+	@include bp($point_4) {
+		width: 2rem;
+	}
+}

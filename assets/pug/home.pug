@@ -1,0 +1,275 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'INTERIOR DESIGN FOR WP', title_inner:'INTERIOR DESIGN'}
+block content_block
+	section.hero
+		.hero_img 
+			img(src="i/hero.jpg", alt="")
+		.hero_main
+			.hero_logotype 
+				+heroIcon
+	section.team.sec_anim 
+		.section_in 
+			.team_main
+				+logo-grey 
+				.team_content.el_anim
+					h2 команда
+					.global_txt 
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.team_people_w.el_anim 
+					ul.team_people 
+						-
+							var people = [
+								{
+									title: 'татьяна мельникова',
+									img: 'people_blonde'
+								},
+								{
+									title: 'анастасия кацюба',
+									img: 'people_dark'
+								},
+							]
+						each item in people 
+							li.people_item 
+								.people_img 
+									img(src=`i/${item.img}.jpg`, alt=item.title)
+								.people_item_title 
+									h3=item.title
+	section.projecthead.sec_anim 
+		.section_in 
+			.projecthead_main
+				+logo-grey
+				.projecthead_title.el_anim 
+					h3 наши проекты
+	section.project 
+		ul.projects_list
+			li.project_item 
+				+one({
+					img: 'cherry_0',
+					number: 1,
+				})
+				+content({
+					title: 'Проект «Вишневый сад» Москва, 140м2',
+					img: 'cherry_1',
+					number: 1,
+				})
+				+free({
+					img: 'cherry',
+					number: 1,
+					start: 2,
+					end: 5,
+				})
+				+one({
+					img: 'cherry_5',
+					number: 1,
+				})
+				+two({
+					img: 'cherry',
+					number: 1,
+					start: 6,
+					end: 8,
+				})
+				+free({
+					img: 'cherry',
+					number: 1,
+					start: 8,
+					end: 11,
+					class: 'build_grid'
+				})
+				+one({
+					img: 'cherry_11',
+					number: 1,
+				})
+				+two({
+					img: 'cherry',
+					number: 1,
+					start: 12,
+					end: 14,
+					class: 'right_small_col'
+				})
+				+two({
+					img: 'cherry',
+					number: 1,
+					start: 14,
+					end: 16,
+					class: 'left_small_col'
+				})
+				+free({
+					img: 'cherry',
+					number: 1,
+					start: 18,
+					end: 21,
+				})
+			li.project_item
+				+block-head({
+					pic: 'bullfinch',
+					num: 2,
+					title: 'Проект «Снегири» Москва' ,
+					titleContent: 'Проект «Снегири» Москва, 140м2'
+				})
+				+one({
+					img: 'bullfinch_3',
+					number: 2,
+				})
+				+two({
+					img: 'bullfinch',
+					number: 2,
+					start: 4,
+					end: 6,
+					class: 'right_small_col'
+				})
+				+one({
+					img: 'bullfinch_6',
+					number: 2,
+				})
+				+one({
+					img: 'bullfinch_7',
+					number: 2,
+				})
+				+two({
+					img: 'bullfinch',
+					number: 2,
+					start: 8,
+					end: 10,
+					class: 'left_small_col'
+				})
+				+two({
+					img: 'bullfinch',
+					number: 2,
+					start: 10,
+					end: 12,
+				})
+			li.project_item
+				+block-head({
+					pic: 'botanical',
+					num: 3,
+					title: 'Проект «Ботанический сад» Москва' ,
+					titleContent: 'Проект «Ботанический сад» Москва, 98м2'
+				})
+				+one({
+					img: 'botanical_3',
+					number: 3,
+				})
+				+two({
+					img: 'botanical',
+					number: 3,
+					start: 4,
+					end: 6,
+					class: 'right_small_col'
+				})
+				+two({
+					img: 'botanical',
+					number: 3,
+					start: 6,
+					end: 8,
+					class: 'left_small_col'
+				})
+				+two({
+					img: 'botanical',
+					number: 3,
+					start: 8,
+					end: 10,
+					class: 'right_small_col'
+				})
+				+one({
+					img: 'botanical_10',
+					number: 3,
+				})
+				+two({
+					img: 'botanical',
+					number: 3,
+					start: 11,
+					end: 13,
+					class: 'right_small_col'
+				})
+			li.project_item
+				+block-head({
+					pic: 'lucky',
+					num: 4,
+					title: 'Проект «Lucky” Москва' ,
+					titleContent: 'Проект «Lucky” Москва'
+				})
+				+one({
+					img: 'lucky_3',
+					number: 4,
+				})
+				+two({
+					img: 'lucky',
+					number: 4,
+					start: 4,
+					end: 6,
+				})
+				+one({
+					img: 'lucky_6',
+					number: 4,
+				})
+			li.project_item
+				+block-head({
+					pic: 'london',
+					num: 5,
+					title: 'Частный дом Лондон' ,
+					titleContent: 'Частный дом Лондон'
+				})
+				+two({
+					img: 'london',
+					number: 5,
+					start: 3,
+					end: 5,
+					class: 'left_small_col'
+				})
+				+two({
+					img: 'london',
+					number: 5,
+					start: 5,
+					end: 7,
+					class: 'right_small_col'
+				})
+			li.project_item
+				+block-head({
+					pic: 'rub',
+					num: 6,
+					title: 'Проект «Парк Рублёво» москва' ,
+					titleContent: 'Проект «Парк Рублёво» москва'
+				})
+				+one({
+					img: 'rub_3',
+					number: 6,
+				})
+	section.projecthead.serviceHead.sec_anim 
+		.section_in 
+			.projecthead_main
+				+logo-grey
+				.projecthead_title.el_anim 
+					h3 услуги
+	section.service.sec_anim
+		+logo-grey 
+		.section_in 
+			.service_main 
+				ul.service_list 
+					each item in ['Разработка дизайн-проекта', 'Составление сметы', 'Реализация', 'Комплектация', 'Подбор предметов искусства', 'Декорирование']
+						li.el_anim=item
+				.service_img 
+					img(src="i/doublegirl.jpg", alt="")
+	section.public.sec_anim
+		+logo-grey 
+		.section_in 
+			.public_main
+				h3.el_anim публикации
+				ul.public_list
+					each item in ['ad', 'houzz', 'id']
+						li.animation_el.el_anim 
+							a(href="#")
+								img(src=`i/${item}.svg`, alt="") 
+	section.contacts.sec_anim
+		+logo-grey 
+		.section_in 
+			.contacts_main 
+				h3.el_anim Контакты
+				ul.contacts_list 
+					each item in ['+7 911 073-02-38', '+7 911 073-02-38', '#wprojectdesign']
+						li.animation_el.el_anim 
+							a(href="#")=item 
+
+

@@ -1,0 +1,28 @@
+// variables,mixins,extends
+@import "helpers/helpers_all";
+@import "family";
+
+// base
+@import "reset";
+@import "fonts";
+@import "base";
+@import "main";
+
+// templates
+@import "templates/header";
+@import "templates/footer";
+
+
+// icons
+@import "icons";
+@import "sprite";
+
+// Page
+
+@import "page/home";
+@import "page/start";
+
+// plugins
+// @import "plugins/swiper-bundle";
+// @import "plugins/fancybox";
+// @import "plugins/simplebar";
