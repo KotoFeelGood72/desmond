@@ -4,6 +4,9 @@
 }
 .start_main {
 	padding: 2.5rem 0 5rem 0;
+	height: 100vh;
+	@include flex-center;
+	flex-direction: column;
 }
 .start_logo {
 	max-width: 24rem;
@@ -31,6 +34,7 @@
 	@include flex-center;
 	@include bp($point_4) {
 		flex-wrap: wrap;
+		margin-bottom: 3rem;
 	}
 
 	.main_title {
@@ -50,32 +54,47 @@
 	margin: 0 auto;
 	transform-origin: left;
 	width: 0;
+	@include bp($point_2) {
+		height: auto;
+	}
 	img {
 		height: 100%;
 		object-fit: cover;
+		@include bp($point_2) {
+			height: auto;
+		}
 	}
 }
 .start_bottom {
 	@include flex-space;
 	opacity: 0;
+	width: 100%;
 	@include bp($point_2) {
 		flex-direction: column;
+		opacity: 1;
 	}
 }
 .start_contacts {
+	width: 100%;
 	ul {
 		@include flex-start;
 		@include bp($point_2) {
 			margin-bottom: 3rem;
 		}
 		@include bp($point_4) {
-			flex-direction: column;
+			// flex-direction: column;
+			flex-wrap: wrap;
+			// margin-bottom: 0;
+			justify-content: center;
 		}
 		li {
 			&:not(:last-child) {
 				margin-right: 7rem;
 				@include bp($point_4) {
 					margin: 0 0 .7rem 0;
+					@include bp($point_4) {
+						margin: 1rem 2rem;
+					}
 				}
 			}
 		}

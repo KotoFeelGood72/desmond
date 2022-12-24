@@ -241,13 +241,16 @@ function visibleEl(el, dur, delay) {
 
 
 function animateStart() {
-	splitTitle();
+
+	if(windowWidth > mediaPoint1) {
+		splitTitle();
+		if($('.start')[0]) {
+			visibleEl('start_logo', .7, 1.7)
+			visibleEl('start_bottom', .7, 1.7)
+		}
+	}
 	animateImg('start_img', 3);
 
-	if($('.start')[0]) {
-		visibleEl('start_logo', .7, 1.7)
-		visibleEl('start_bottom', .7, 1.7)
-	}
 
 	animateImg('hero_img img', .7, () => {
 		visibleEl('hero_logotype', .3, .7)

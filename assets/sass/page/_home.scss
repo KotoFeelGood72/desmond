@@ -52,6 +52,9 @@
 .team {
 	@include border;
 	position: relative;
+	@include bp($point_4) {
+		order: 10;
+	}
 }
 
 
@@ -195,7 +198,7 @@
 		@include bp($point_2) {
 			padding: 12rem 2rem;
 			@include border;
-			max-width: 100%;
+			max-width: 90%;
 		}
 
 		@include bp($point_4) {
@@ -286,14 +289,44 @@
 		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 	}
 	li {
+		&:nth-child(1) {
+			@include bp($point_4) {
+				border: none;
+				border-bottom: .3rem solid $grey1;
+			}
+			@include bp($point_4) {
+				height: auto;
+			}
+
+			img {
+				@include bp($point_4) {
+					height: auto;
+				}
+			}
+		}
 		&:nth-child(2) {
 			height: 54.9rem;
 			@include bp($point_4) {
-				height: 20rem;
+				height: auto;
+			}
+
+			img {
+				@include bp($point_4) {
+					height: auto;
+				}
 			}
 		}
 		&:nth-child(3) {
 			height: 38.2rem;
+			@include bp($point_4) {
+				height: auto;
+			}
+
+			img {
+				@include bp($point_4) {
+					height: auto;
+				}
+			}
 
 		}
 		&:nth-child(1) {
@@ -429,6 +462,9 @@
 }
 .public {
 	@include border;
+	@include bp($point_4) {
+		order: 11;
+	}
 }
 .public_main {
 	padding: 26rem 0 35.9rem 0;
@@ -504,6 +540,9 @@
 }
 .contacts {
 	position: relative;
+	@include bp($point_4) {
+		order: 12;
+	}
 }
 .contacts_main {
 	padding: 26rem 0 40.8rem 0;

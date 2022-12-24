@@ -54,6 +54,11 @@ body {
 	// padding: $header 0 0;
 
 	flex: 1 0 auto;
+	@include bp($point_4) {
+		// @include flex-start;
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 a {
