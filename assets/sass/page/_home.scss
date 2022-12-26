@@ -146,9 +146,15 @@
 	height: 54.2rem;
 	margin-bottom: 2rem;
 	@include bp($point_4) {
-		height: 100%;
+		height: auto;
 		@include flex-center;
 		overflow: hidden;
+	}
+	img {
+		@include bp($point_2) {
+			height: auto;
+			object-fit: contain;
+		}
 	}
 }
 .people_img {

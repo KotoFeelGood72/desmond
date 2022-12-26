@@ -175,39 +175,39 @@ el.forEach((item) => {
 
 
 
-function splitTitle() {
-	const title = document.querySelector('.start_title')
+// function splitTitle() {
+// 	const title = document.querySelector('.start_title')
 
-	const splitText = (el) => {
-		if(el) {
-			el.innerHTML = el.textContent.replace(/(\S*)/g, m => {
-			return `<div class="main_title">` +
-					m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter'>$&</div>") +
-					`</div>`;
-			});
-		}
-		return el;
-	};
+// 	const splitText = (el) => {
+// 		if(el) {
+// 			el.innerHTML = el.textContent.replace(/(\S*)/g, m => {
+// 			return `<div class="main_title">` +
+// 					m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter'>$&</div>") +
+// 					`</div>`;
+// 			});
+// 		}
+// 		return el;
+// 	};
 	
-	const split = splitText(title);
+// 	const split = splitText(title);
 	
-	function random(min, max){
-		return (Math.random() * (max - min)) + min;
-	}
-	if(split) {
-		Array.from(split.querySelectorAll('.letter')).forEach((el, idx) => {
-			TweenMax.from(el, 1.5, {
-				opacity: 0,
-				scale: .1,
-				x: random(-500, 500),
-				y: random(-500, 500),
-				z: random(-500, 500),
-				delay: idx * 0.01,
-				repeat: 0,
-			})
-		});
-	}
-}
+// 	function random(min, max){
+// 		return (Math.random() * (max - min)) + min;
+// 	}
+// 	if(split) {
+// 		Array.from(split.querySelectorAll('.letter')).forEach((el, idx) => {
+// 			TweenMax.from(el, 1.5, {
+// 				opacity: 0,
+// 				scale: .1,
+// 				x: random(-500, 500),
+// 				y: random(-500, 500),
+// 				z: random(-500, 500),
+// 				delay: idx * 0.01,
+// 				repeat: 0,
+// 			})
+// 		});
+// 	}
+// }
 
 function animateImg(el, dur, delay) {
 	const img = document.querySelector(`.${el}`);
@@ -243,7 +243,7 @@ function visibleEl(el, dur, delay) {
 function animateStart() {
 
 	if(windowWidth > mediaPoint1) {
-		splitTitle();
+		// splitTitle();
 		if($('.start')[0]) {
 			visibleEl('start_logo', .7, 1.7)
 		}
