@@ -16,6 +16,7 @@
 	@include bp($point_4) {
 		margin: 0 auto 5rem auto;
 		max-width: 20rem;
+		opacity: 1;
 	}
 	a {
 		@include flex-center;
