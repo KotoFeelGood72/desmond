@@ -52,9 +52,9 @@
 .team {
 	@include border;
 	position: relative;
-	@include bp($point_4) {
-		order: 10;
-	}
+	// @include bp($point_4) {
+	// 	order: 10;
+	// }
 }
 
 
@@ -431,7 +431,7 @@
 	@include bp($point_2) {
 		margin: 0 0 12rem 2rem;
 		padding-top: 0;
-		order: 1;
+		// order: 1;
 	}
 	li {
 		font-family: $font_1;
@@ -462,9 +462,9 @@
 }
 .public {
 	@include border;
-	@include bp($point_4) {
-		order: 11;
-	}
+	// @include bp($point_4) {
+	// 	order: 11;
+	// }
 }
 .public_main {
 	padding: 26rem 0 35.9rem 0;
@@ -540,9 +540,9 @@
 }
 .contacts {
 	position: relative;
-	@include bp($point_4) {
-		order: 12;
-	}
+	// @include bp($point_4) {
+	// 	order: 12;
+	// }
 }
 .contacts_main {
 	padding: 26rem 0 40.8rem 0;

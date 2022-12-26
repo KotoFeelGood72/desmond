@@ -1,9 +1,12 @@
 .start {
-}
-.section_in {
+	.section_in {
+		@include bp($point_4) {
+			padding: 0;
+		}
+	}
 }
 .start_main {
-	padding: 2.5rem 0 5rem 0;
+	padding: 4rem 0 5rem 0;
 	height: 100vh;
 	@include flex-center;
 	flex-direction: column;
@@ -11,10 +14,10 @@
 .start_logo {
 	max-width: 24rem;
 	max-height: 4.2rem;
-	margin: 0 auto 13rem auto;
+	margin: 0 auto 10rem auto;
 	opacity: 0;
 	@include bp($point_4) {
-		margin: 0 auto 5rem auto;
+		margin: 0 auto 3rem auto;
 		max-width: 20rem;
 		opacity: 1;
 	}
@@ -26,7 +29,7 @@
 .start_body {
 	margin-bottom: 19rem;
 	@include bp($point_4) {
-		margin-bottom: 8rem;
+		margin-bottom: 7rem;
 	}
 }
 .start_title {
@@ -35,7 +38,7 @@
 	@include flex-center;
 	@include bp($point_4) {
 		flex-wrap: wrap;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 
 	.main_title {
@@ -56,13 +59,14 @@
 	transform-origin: left;
 	width: 0;
 	@include bp($point_2) {
-		height: auto;
+		// height: auto;
+		height: 20rem;
 	}
 	img {
 		height: 100%;
 		object-fit: cover;
 		@include bp($point_2) {
-			height: auto;
+			// height: auto;
 		}
 	}
 }
@@ -77,6 +81,9 @@
 }
 .start_contacts {
 	width: 100%;
+	@include bp($point_4) {
+		padding: 0 2rem
+	}
 	ul {
 		@include flex-start;
 		@include bp($point_2) {
@@ -104,6 +111,7 @@
 .start_btn {
 	@include bp($point_4) {
 		width: 100%;
+		padding: 0 2rem
 	}
 	a {
 		@include flex-center;

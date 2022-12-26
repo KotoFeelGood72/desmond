@@ -246,9 +246,9 @@ function animateStart() {
 		splitTitle();
 		if($('.start')[0]) {
 			visibleEl('start_logo', .7, 1.7)
-			visibleEl('start_bottom', .7, 1.7)
 		}
 	}
+	visibleEl('start_bottom', .7, 1.7)
 	animateImg('start_img', 3);
 
 
