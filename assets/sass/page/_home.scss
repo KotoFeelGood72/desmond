@@ -431,7 +431,7 @@
 	@include bp($point_2) {
 		margin: 0 0 12rem 2rem;
 		padding-top: 0;
-		// order: 1;
+		order: 1;
 	}
 	li {
 		font-family: $font_1;
