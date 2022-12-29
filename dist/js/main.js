@@ -157,7 +157,7 @@ $(document).on("mousemove", function(e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
-// yellow circle
+
 const el = document.querySelectorAll('.animation_el a');
 cursor.addClass("visible")
 		follower.addClass("visible")
@@ -241,12 +241,8 @@ function visibleEl(el, dur, delay) {
 
 
 function animateStart() {
-
-	if(windowWidth > mediaPoint1) {
-		// splitTitle();
-		if($('.start')[0]) {
-			visibleEl('start_logo', .7, 1.7)
-		}
+	if($('.start')[0]) {
+		visibleEl('start_logo, .start_title', .7, 1.7)
 	}
 	visibleEl('start_bottom', .7, 1.7)
 	animateImg('start_img', 3);
@@ -316,9 +312,7 @@ function allDefautAnim(bottom = false, start = '-=30% center', end = 'bottom') {
 
 
 function loader() {
-
 	const loader = document.querySelector('.loader')
-
 	loader.classList.add('hidden')
 }
 
